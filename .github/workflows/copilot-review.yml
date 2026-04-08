@@ -1,0 +1,12 @@
+name: Copilot Code Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review]
+
+jobs:
+  copilot-review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copilot Review
+        uses: github/copilot-code-review-action@latest
